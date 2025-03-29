@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <a href="index.html">Hjem</a>
+    <title>Kontakt oss</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
 
+        h1 {
+            color: #333;
+        }
+
+        .kontakt-info {
+            margin-bottom: 20px;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0077cc;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <nav>
+        <a href="index.html">Hjem</a>
+        <a href="kontakt.html">Kontakt oss</a>
+    </nav>
+
+    <h1>Kontakt oss</h1>
+
+    <div class="kontakt-info">
+        <p><strong>Adresse:</strong> Storgata 12, 0155 Oslo</p>
+        <p><strong>Telefon:</strong> +47 123 45 678</p>
+        <p><strong>E-post:</strong> kontakt@smakvelvaere.no</p>
+        <p><strong>Åpningstider:</strong> Man–Fre: 10:00–18:00<br>Lørdag: 10:00–15:00<br>Søndag: Stengt</p>
+    </div>
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10261.16933493618!2d10.7419355!3d59.9127269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e61dcd67a59%3A0xc3e17fd3dd98f91f!2sStorgata%2012%2C%200155%20Oslo!5e0!3m2!1sno!2sno!4v1711715580981"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <form action="mailto:kontakt@smakvelvaere.no" method="post" enctype="text/plain">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" required>
+
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" name="epost" required>
+
+        <label for="melding">Melding:</label>
+        <textarea id="melding" name="melding" rows="5" required></textarea>
+
+        <button type="submit">Send melding</button>
+    </form>
 
 </body>
 
