@@ -1,13 +1,22 @@
-/* Import font hvis nødvendig */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+/* Reset & base */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f6ebdf;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Toppbanner med logo */
+html,
+body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6ebdf;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
 .banner {
   display: flex;
   align-items: center;
@@ -15,8 +24,10 @@ body {
   padding: 20px 40px;
   background-color: #f6ebdf;
   border-bottom: 1px solid #ddd;
+  height: 90px;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -58,48 +69,84 @@ body {
   font-weight: 700;
 }
 
-/* Knapper */
+/* ALT UNDER HEADER */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: calc(100vh - 90px);
+}
+
+/* KNAPPENE */
 .button-column {
   display: flex;
-  flex-direction: row; /* Viktig! Gjør dem sidestilt */
   justify-content: center;
-  align-items: center;
   gap: 15px;
-  margin-top: 30px;
+  padding: 20px 0;
+  background-color: #f6ebdf;
 }
 
 .button-column button {
   padding: 10px 20px;
   font-size: 16px;
-  border: none;
   background-color: #4b5e3d;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .button-column button:hover {
-  background-color: #4b5e3ds;
+  background-color: #7d9b69;
 }
 
-/* Sidebar */
+.button-column i {
+  font-size: 1rem;
+}
+
+/* INNHOLDS-LAYOUT: SIDEBAR + MAIN */
+.wrapper {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 90px); /* match høyden under header */
+}
+
 .sidebar {
-  padding: 20px;
+  width: 200px;
+  background-color: #e0dacd;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 90px); /* fyll hele høyden under header */
 }
 
 .sidebar a {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   color: #4b5e3d;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .sidebar a:hover {
   color: #7d9b69;
 }
 
-/* Hovedinnhold */
+/* MAIN INNHOLD */
 .main-content {
-  padding: 20px;
+  flex: 1;
+  padding: 40px;
+  background-color: #f6ebdf;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 240px; /* flytt innholdet bort fra sidebar */
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  color: #4b5e3d;
+  margin-bottom: 10px;
 }
