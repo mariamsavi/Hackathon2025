@@ -44,54 +44,79 @@
 
             <!-- INNHOLD -->
             <div class="main-content">
-                <h1>Frukt & Grønt</h1>
-                <p>Velkommen! Nå skal du se denne teksten. 🍎</p>
+                <h1>Frukt & Grønt 🍎</h1>
+
 
                 <!-- BILDEGRID -->
                 <div class="grid-container">
-                    <div><img src="Jordbaer.png" alt="Jordbær 400g"></div>
-                    <div><img src="Gulrot.png" alt="Gulrot 400g"></div>
-                    <div><img src="Brokkoli.png" alt="Brokkoli 400g"></div>
-                    <div><img src="Banan.png" alt="Banan"></div>
-                    <div><img src="Appelsin.png" alt="Appelsin"></div>
-                    <div><img src="Eple.png" alt="Eple"></div>
-                    <div><img src="Paprika.png" alt="Paprika"></div>
-                    <div><img src="Tomat.png" alt="Tomat"></div>
+                    <div class="product-item">
+                        <img src="Jordbaer.png" alt="Jordbær 400g">
+                        <p>Jordbær 400g – 39 kr</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Gulrot.png" alt="Gulrot 400g">
+                        <p>Gulrot 400g – 19 kr</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Brokkoli.png" alt="Brokkoli 400g">
+                        <p>Brokkoli 400g – 24 kr</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Banan.png" alt="Banan">
+                        <p>Banan – 9 kr/stk</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Appelsin.png" alt="Appelsin">
+                        <p>Appelsin – 7 kr/stk</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Eple.png" alt="Eple">
+                        <p>Grønt eple – 6 kr/stk</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Paprika.png" alt="Paprika">
+                        <p>Rød paprika – 14 kr</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="Tomat.png" alt="Tomat">
+                        <p>Små tomater 500g – 29 kr</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
     <!-- Handlekurv Sidebar -->
-<div id="cart-sidebar" class="cart-sidebar">
-    <button class="close-cart">&times;</button>
-    <h2>Handlekurv</h2>
-    <p>Ingen varer i handlekurven.</p>
-  </div>
-  
-  <div id="overlay" class="overlay"></div>
-  
-  <script>
-    const cartButton = document.getElementById("cart-button");
-    const cartSidebar = document.getElementById("cart-sidebar");
-    const closeCart = document.querySelector(".close-cart");
-    const overlay = document.getElementById("overlay");
-  
-    cartButton.addEventListener("click", () => {
-      cartSidebar.classList.add("open");
-      overlay.classList.add("active");
-    });
-  
-    closeCart.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-      overlay.classList.remove("active");
-    });
-  
-    overlay.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-      overlay.classList.remove("active");
-    });
-  </script>
-  
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button class="close-cart">&times;</button>
+        <h2>Handlekurv</h2>
+        <p>Ingen varer i handlekurven.</p>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script>
+        const cartButton = document.getElementById("cart-button");
+        const cartSidebar = document.getElementById("cart-sidebar");
+        const closeCart = document.querySelector(".close-cart");
+        const overlay = document.getElementById("overlay");
+
+        cartButton.addEventListener("click", () => {
+            cartSidebar.classList.add("open");
+            overlay.classList.add("active");
+        });
+
+        closeCart.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
+
 </body>
 
 </html>
