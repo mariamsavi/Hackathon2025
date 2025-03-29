@@ -105,7 +105,7 @@
         <div class="logo">
             <div class="avocado-icon"></div>
             <div class="logo-text">Smak · Velvære</div>
-            
+
             <div style="font-size: 12px; color: #4b5e3d; margin-top: 2px;">"Mat med mening"</div>
         </div>
     </header>
@@ -122,63 +122,71 @@
 
     <!-- Sidebar Navigasjon -->
     <!-- Main content layout container -->
-<div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <a href="Fruktgront.html">Frukt & grønt</a>
-        <a href="Bakeri.html">Bakeri</a>
-        <a href="Kjott.html">Kjøtt</a>
-        <a href="Snacks.html">Snacks og godteri</a>
-        <a href="Personlig.html">Personlige artikler</a>
-    </div>
-
-    <!-- Main content including SALG -->
-    <div class="main-content">
-        <div class="sales-section">
-            <h2 style="color: #4b5e3d;">SALG</h2>
-            <p>Se våre utvalgte produkter til rabatterte priser!</p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li>🥑 Økologisk avokado – 30% rabatt</li>
-                <li>🍞 Surdeigsbrød – 2 for 1</li>
-                <li>🍫 Mørk sjokolade – 20% rabatt</li>
-            </ul>
+    <div style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="Fruktgront.html">Frukt & grønt</a>
+            <a href="Bakeri.html">Bakeri</a>
+            <a href="Kjott.html">Kjøtt</a>
+            <a href="Snacks.html">Snacks og godteri</a>
+            <a href="Personlig.html">Personlige artikler</a>
         </div>
-    </div>
-</div>
 
-   
+        <!-- Main content including SALG -->
+        <!-- Main content including SALG -->
+        <div class="sales-wrapper">
+            <h1 class="sales-title">Tilbud <span>🛒</span></h1>
 
-    <!-- Handlekurv Sidebar -->
-    <div id="cart-sidebar" class="cart-sidebar">
-        <button class="close-cart">&times;</button>
-        <h2>Handlekurv</h2>
-        <p>Ingen varer i handlekurven.</p>
-    </div>
+            <div class="sales-products">
+                <div class="product-box">
+                    <img src="Tilbud3.png" alt="Kremgo'">
+                    <p>Kremgo´ med urter – <strong><del>25 kr </del>19 kr</strong></p>
+                </div>
+                <div class="product-box">
+                    <img src="Tilbud1.png" alt="Kjøttpølse">
+                    <p>Kjøttpølse – <strong> <del>35 kr </del>29 kr</strong></p>
+                </div>
+                <div class="product-box">
+                    <img src="Tilbud2.png" alt="Brun saus">
+                    <p>Brun saus med løk – <strong> <del>45 kr </del>25 kr</strong></p>
+                </div>
+            </div>
+        </div>
 
-    <div id="overlay" class="overlay"></div>
 
-    <!-- JS for sliding cart -->
-    <script>
-        const cartButton = document.getElementById("cart-button");
-        const cartSidebar = document.getElementById("cart-sidebar");
-        const closeCart = document.querySelector(".close-cart");
-        const overlay = document.getElementById("overlay");
 
-        cartButton.addEventListener("click", () => {
-            cartSidebar.classList.add("open");
-            overlay.classList.add("active");
-        });
 
-        closeCart.addEventListener("click", () => {
-            cartSidebar.classList.remove("open");
-            overlay.classList.remove("active");
-        });
+        <!-- Handlekurv Sidebar -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <button class="close-cart">&times;</button>
+            <h2>Handlekurv</h2>
+            <p>Ingen varer i handlekurven.</p>
+        </div>
 
-        overlay.addEventListener("click", () => {
-            cartSidebar.classList.remove("open");
-            overlay.classList.remove("active");
-        });
-    </script>
+        <div id="overlay" class="overlay"></div>
+
+        <!-- JS for sliding cart -->
+        <script>
+            const cartButton = document.getElementById("cart-button");
+            const cartSidebar = document.getElementById("cart-sidebar");
+            const closeCart = document.querySelector(".close-cart");
+            const overlay = document.getElementById("overlay");
+
+            cartButton.addEventListener("click", () => {
+                cartSidebar.classList.add("open");
+                overlay.classList.add("active");
+            });
+
+            closeCart.addEventListener("click", () => {
+                cartSidebar.classList.remove("open");
+                overlay.classList.remove("active");
+            });
+
+            overlay.addEventListener("click", () => {
+                cartSidebar.classList.remove("open");
+                overlay.classList.remove("active");
+            });
+        </script>
 
 </body>
 
