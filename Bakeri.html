@@ -27,7 +27,7 @@
             <a href="index.html"><button>Hjem</button></a>
             <a href="Omoss.html"><button>Om oss</button></a>
             <a href="Kontaktoss.html"><button>Kontakt oss</button></a>
-            <a href="Handlekurv.html"><button><i class="fas fa-shopping-cart"></i></button></a>
+            <button id="cart-button"><i class="fas fa-shopping-cart"></i></button>
         </div>
 
         <!-- Layout: sidebar + innhold -->
@@ -47,7 +47,37 @@
             </div>
         </div>
     </div>
-
+    <!-- Handlekurv Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <button class="close-cart">&times;</button>
+    <h2>Handlekurv</h2>
+    <p>Ingen varer i handlekurven.</p>
+  </div>
+  
+  <div id="overlay" class="overlay"></div>
+  
+  <script>
+    const cartButton = document.getElementById("cart-button");
+    const cartSidebar = document.getElementById("cart-sidebar");
+    const closeCart = document.querySelector(".close-cart");
+    const overlay = document.getElementById("overlay");
+  
+    cartButton.addEventListener("click", () => {
+      cartSidebar.classList.add("open");
+      overlay.classList.add("active");
+    });
+  
+    closeCart.addEventListener("click", () => {
+      cartSidebar.classList.remove("open");
+      overlay.classList.remove("active");
+    });
+  
+    overlay.addEventListener("click", () => {
+      cartSidebar.classList.remove("open");
+      overlay.classList.remove("active");
+    });
+  </script>
+  
 </body>
 
 </html>

@@ -11,8 +11,91 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Din egen stil (NB: riktig filnavn og plassering) -->
+    <!-- Din egen stil -->
     <link rel="stylesheet" href="Style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f6ebdf;
+            padding: 20px;
+        }
+
+        .button-column {
+            margin-top: 20px;
+        }
+
+        .button-column button {
+            background-color: #4b5e3d;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            margin-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #4b5e3d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Handlekurv Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 300px;
+            height: 100%;
+            background-color: #f6ebdf;
+            color: #4b5e3d;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-sidebar h2 {
+            margin-top: 0;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 28px;
+            float: right;
+            color: #4b5e3d;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,10 +112,11 @@
     <div class="button-column">
         <a href="Omoss.html"><button>Om oss</button></a>
         <a href="Kontaktoss.html"><button>Kontakt oss</button></a>
-        <a href="Handlekurv.html"><button><i class="fas fa-shopping-cart"></i></button></a>
+        <!-- Changed to trigger cart -->
+        <button id="cart-button"><i class="fas fa-shopping-cart"></i></button>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar Navigasjon -->
     <div class="sidebar">
         <a href="Fruktgront.html">Frukt & grønt</a>
         <a href="Bakeri.html">Bakeri</a>
@@ -44,6 +128,38 @@
     <div class="main-content">
         <!-- Hovedinnhold -->
     </div>
+
+    <!-- Handlekurv Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button class="close-cart">&times;</button>
+        <h2>Handlekurv</h2>
+        <p>Ingen varer i handlekurven.</p>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- JS for sliding cart -->
+    <script>
+        const cartButton = document.getElementById("cart-button");
+        const cartSidebar = document.getElementById("cart-sidebar");
+        const closeCart = document.querySelector(".close-cart");
+        const overlay = document.getElementById("overlay");
+
+        cartButton.addEventListener("click", () => {
+            cartSidebar.classList.add("open");
+            overlay.classList.add("active");
+        });
+
+        closeCart.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
 
 </body>
 
