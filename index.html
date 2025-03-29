@@ -101,14 +101,25 @@
 <body>
 
     <!-- Toppbanner med logo -->
-    <header class="banner">
-        <div class="logo">
-            <div class="avocado-icon"></div>
-            <div class="logo-text">Smak · Velvære</div>
-
-            <div style="font-size: 12px; color: #4b5e3d; margin-top: 2px;">"Mat med mening"</div>
+    <!-- Toppbanner med logo og fruktbilde -->
+<!-- Toppbanner med logo og fruktbilde -->
+<header class="banner" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #f6ebdf; width: 100%;">
+    <!-- Logo og tekst -->
+    <div class="logo" style="display: flex; align-items: center; gap: 20px;">
+        <div class="avocado-icon" style="width: 60px; height: 80px; background-image: url('your-avocado-icon.svg'); background-size: contain; background-repeat: no-repeat;"></div>
+        <div class="logo-text">
+            <div style="font-size: 32px; font-weight: 600; color: #4b5e3d;">Smak · Velvære</div>
+            <div style="font-size: 14px; color: #4b5e3d;">Mat med mening</div>
         </div>
-    </header>
+    </div>
+
+    <!-- Fruktbilde -->
+    <div style="text-align: center; ">
+        <img src="fruits_only_transparent.png" alt="Frukt og grønt" style="height: 100px; width: 800px;" />
+    </div>
+</header>
+
+
 
     <!-- Knapper: Om oss, Kontakt oss, Handlekurv -->
     <div class="button-column">
