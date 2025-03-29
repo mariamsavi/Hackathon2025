@@ -47,9 +47,9 @@
                 <p>Utforsk vårt utvalg av kjøttprodukter:</p>
 
                 <div class="meat-grid">
-                    <div><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Biff"></div>
-                    <div><img src="https://images.unsplash.com/photo-1604908176899-f9af1c8411d9" alt="Kyllinglår"></div>
-                    <div><img src="https://images.unsplash.com/photo-1605478443332-56f89d8005ab" alt="Kjøttdeig"></div>
+                    <div><img src="Kjøtt1.png" alt="Kjøtt1"></div>
+                    <div><img src="Kjøtt2.png" alt="Kyllinglår"></div>
+                    <div><img src="Kjøtt3.png" alt="Kjøttdeig"></div>
                 </div>
             </div>
 
@@ -57,36 +57,36 @@
     </div>
 
     <!-- Handlekurv Sidebar -->
-<div id="cart-sidebar" class="cart-sidebar">
-    <button class="close-cart">&times;</button>
-    <h2>Handlekurv</h2>
-    <p>Ingen varer i handlekurven.</p>
-  </div>
-  
-  <div id="overlay" class="overlay"></div>
-  
-  <script>
-    const cartButton = document.getElementById("cart-button");
-    const cartSidebar = document.getElementById("cart-sidebar");
-    const closeCart = document.querySelector(".close-cart");
-    const overlay = document.getElementById("overlay");
-  
-    cartButton.addEventListener("click", () => {
-      cartSidebar.classList.add("open");
-      overlay.classList.add("active");
-    });
-  
-    closeCart.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-      overlay.classList.remove("active");
-    });
-  
-    overlay.addEventListener("click", () => {
-      cartSidebar.classList.remove("open");
-      overlay.classList.remove("active");
-    });
-  </script>
-  
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button class="close-cart">&times;</button>
+        <h2>Handlekurv</h2>
+        <p>Ingen varer i handlekurven.</p>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script>
+        const cartButton = document.getElementById("cart-button");
+        const cartSidebar = document.getElementById("cart-sidebar");
+        const closeCart = document.querySelector(".close-cart");
+        const overlay = document.getElementById("overlay");
+
+        cartButton.addEventListener("click", () => {
+            cartSidebar.classList.add("open");
+            overlay.classList.add("active");
+        });
+
+        closeCart.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            cartSidebar.classList.remove("open");
+            overlay.classList.remove("active");
+        });
+    </script>
+
 </body>
 
 </html>
