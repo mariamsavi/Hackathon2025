@@ -25,8 +25,8 @@ body {
 }
 
 .avocado-icon {
-  width: 35px;
-  height: 50px;
+  width: 50px;
+  height: 70px;
   position: relative;
 }
 
@@ -54,8 +54,8 @@ body {
 }
 
 .logo-text {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 /* Knapper */
@@ -72,7 +72,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #575fcf;
+  background-color: #4b5e3d;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -80,7 +80,7 @@ body {
 }
 
 .button-column button:hover {
-  background-color: #3c40c6;
+  background-color: #4b5e3d;
 }
 
 /* Sidebar */
